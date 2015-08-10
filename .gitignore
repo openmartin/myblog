@@ -2,8 +2,11 @@
 __pycache__/
 *.py[cod]
 
-#static
+# static
 /static/
+
+# DS_Store
+.DS_Store
 
 # C extensions
 *.so
