@@ -1,4 +1,4 @@
-Python中Class的JSON序列化
+Python中class的JSON序列化
 ==========================
 
 在Java中如果定义一个class，是十分方便JSON序列化的,比如说使用jackson lib。
@@ -26,4 +26,4 @@ Python中Class的JSON序列化
     json.dumps(a, cls=ClsEncoder)
 
 
-在使用json.dumps的时候指定ClsEncoder就能够达到目标
+在使用json.dumps的时候指定ClsEncoder就能够达到目的
