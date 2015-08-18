@@ -7,7 +7,7 @@
 对小公司来说是一个稳定的在线存储,可以减少维护成本。
 
 boto3 Python SDK
---------------
+------------------
 
 目前官方推荐的Python SDK 是boto3 https://github.com/boto/boto3
 

@@ -9,6 +9,9 @@ Python中class的JSON序列化
 
 其实Python的class也十分方便JSON序列化,需要一小段代码就可以::
 
+    import json
+    from json import JSONEncoder
+
     def obj2dict(obj):
         memberlist = [m for m in dir(obj)]
         _dict = {}
