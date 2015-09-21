@@ -44,12 +44,12 @@ all()是python的一个内置函数，官方文档里面说如果所有的元素都为True，all()才返回Tr
     UnicodeDecodeError: 'ascii' codec can't decode byte 0x88 in position 1: ordinal not in range(128)
 
 
-这是因为python从注册表中HKEY_CLASSES_ROOT读取mimetype时，有包含中文的文件名后缀，一般都是阿里巴巴的。::
+这是因为python从注册表中HKEY_CLASSES_ROOT读取mimetype时，有包含中文的文件名后缀，一般都是阿里旺旺的。::
 
     HKEY_CLASSES_ROOT\.阿里旺旺接收的可疑文件
 
 
-把这项删除了就不会再出现UnicodeDecodeError错误。
+删除这项就不会再出现UnicodeDecodeError错误。
 
 我的版本是Python 2.7.6，会出现这个问题，Python 2.7.7及以后的版本修复了这个问题。
 
@@ -59,7 +59,6 @@ python setup.py develop
 
 develop模式并不会真正的install这个包，而是在site-packages文件夹中建立一个.egg-link文件，类似于操作系统的软链接。
 这样你就可以随意编辑你的代码，并不需要每次测试的时候都reinstall一遍。当然你的程序要以python包的形似来组织才行。
-
 
 更多信息考参考文档 http://pythonhosted.org//setuptools/setuptools.html#development-mode
 
