@@ -1,18 +1,18 @@
 如何使用django-zinnia-blog建站
-===============================
+========================
 
 `django-zinnia-blog <http://django-blog-zinnia.com/>`_
 顾名思义就是一套用Django开发的个人博客程序，虽然比大名鼎鼎的wordpress略显简陋，不过在以Python作为开发语言的博客系统中算是很不错的。
 
 pip
------------------
+---
 
 如果Python版本是2.7.9或者是3.4 以上，pip默认包含于Python的安装包中
 
 怎么安装pip，参考这里 https://pip.pypa.io/en/latest/installing.html
 
 virtualenv
-------------------
+----------
 
 virtualenv 用于创建独立的Python环境，可以不受全局的site-packages当中安装的包的影响。::
 
@@ -21,7 +21,7 @@ virtualenv 用于创建独立的Python环境，可以不受全局的site-package
     virtualenv ENV
     cd ENV
     source ./bin/activate
-
+    
 磨刀不误砍柴工，接下来开始大展身手啦。
 
 
@@ -44,7 +44,7 @@ Django1.7的命令和以前有些不一样，记录一下::
 
 
 安装theme
----------------------
+-------
 
 使用zinnia不像wordpress那样有丰富多样的主题可以选择，需要我们手动修改一番，我们可以选择zinnia-theme-bootstrap，然后在这个基础上修修改改::
 
@@ -61,7 +61,7 @@ Django1.7的命令和以前有些不一样，记录一下::
 
 
 使用reStructuredText写博客
----------------------------
+---------------------
 
 如果你喜欢用reStructuredText写文档的话，zinnia也支持，不过需要我们配置一下。::
     
@@ -72,7 +72,7 @@ Django1.7的命令和以前有些不一样，记录一下::
     ZINNIA_MARKUP_LANGUAGE = 'restructuredtext'
 
 settings.py和urls.py
-----------------------------
+-------------------
 
 在配置文件中有很多坑，我被坑了好长时间才爬出来，希望后来人不要接着被坑了。
 
