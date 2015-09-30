@@ -13,7 +13,7 @@ boto3 Python SDK
 
 接下来进入正题,直接看代码把。::
 
-    from boto3.sessionn import Session
+    from boto3.session import Session
 
     session = Session(aws_access_key_id='<key>', \
         aws_secret_access_key='<key>', \
