@@ -3,7 +3,7 @@ s3 本地测试环境的搭建
 
 s3 ninja
 --------
-http://s3ninja.net/ s3 ninja 在本地模拟S3 API, 而且自带一个管理界面, 但是需要修改代码,把endpoint_url指定为 http://localhost:9444/s3
+http://s3ninja.net/ s3 ninja 在本地模拟S3 API, 而且自带一个管理界面, 但是需要修改代码或者增加配置,把endpoint_url指定为 http://localhost:9444/s3
 
 如果我们不想修改代码,可以通过一些简单的配置把请求导向本地 s3 ninja
 
@@ -41,17 +41,28 @@ mybucket.s3.amazonaws.com -> localhost:9444:s3/mybucket
 nginx
 ^^^^^
 
+nginx 把127.0.0.1:80 的请求转向 127.0.0.1:9444
+
+配置文件如下::
+
+    server {
+    listen       80;
+    server_name  localhost;
+    location / {
+        proxy_pass http://127.0.0.1:9444;
+        rewrite ^(.*)$ /s3/mybucket$1 break;
+    }
+
 
 配置多个bucket
 ----------
 
+上面的配置只说了一个bucket的情况，如果有多个bucket需要测试，我们使用nginx virtualhost的功能就可以做到，把server_name 改成 bucket的域名就行
 
 
+推荐工具
+----
 
+在Mac 上 gas mask 可以很方便的切换和编辑hosts文件 http://clockwise.ee/
 
-
-
-1. nginx
-2. s3 ninja
-3. gas mask
-
+在Mac 上 安装 nginx，可以使用brew install nginx  http://brew.sh/  启动命令 sudo nginx， sudo nginx -s reload
