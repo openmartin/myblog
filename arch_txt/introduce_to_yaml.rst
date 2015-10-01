@@ -106,6 +106,7 @@ pyyaml http://pyyaml.org/wiki/PyYAML
 如果需要更严格的指定数据类型需要了解yaml tags
 
 http://www.yaml.org/spec/1.2/spec.html 2.4. Tags
+
 http://yaml.org/type/index.html
 
 
