@@ -10,7 +10,7 @@ http://s3ninja.net/ s3 ninja 在本地模拟S3 API, 而且自带一个管理界�
 
 s3 virtual hosted-style and path-style access
 ---------------------------------------------
-访问s3 bucket上的文件,有两种方式.::
+访问s3 bucket上的文件,有两种方式::
 
     # example bucket名字 johnsmith  文件 homepage.html
 
@@ -22,13 +22,15 @@ s3 virtual hosted-style and path-style access
 
 
 更多信息参考
+
 http://docs.aws.amazon.com/zh_cn/AmazonS3/latest/dev/UsingBucket.html#access-bucket-intro
+
 http://docs.aws.amazon.com/zh_cn/AmazonS3/latest/dev/VirtualHosting.html
 
 如何配置
 ----
 
-我们要达到的目的如下
+我们要达到的目的如下,把原本对亚马逊的HTTP请求指向本地的S3 ninja
 
 mybucket.s3.amazonaws.com -> localhost:9444:s3/mybucket
 
@@ -38,6 +40,7 @@ mybucket.s3.amazonaws.com -> localhost:9444:s3/mybucket
 
     127.0.0.1 mybucket.s3.amazonaws.com
 
+这样可以把亚马逊的域名指向本地，但是端口和访问路径Path的修改需要nginx来实现
 nginx
 ^^^^^
 
@@ -50,7 +53,7 @@ nginx 把127.0.0.1:80 的请求转向 127.0.0.1:9444
     server_name  localhost;
     location / {
         proxy_pass http://127.0.0.1:9444;
-        rewrite ^(.*)$ /s3/mybucket$1 break;
+        rewrite ^(.*)$ /s3/mybucket$1 break; #例如 /homepage.html => /s3/mybucket/homepage.html
     }
 
 
