@@ -40,6 +40,7 @@ mybucket.s3.amazonaws.com -> localhost:9444:s3/mybucket
     127.0.0.1 mybucket.s3.amazonaws.com
 
 这样可以把亚马逊的域名指向本地，但是端口和访问路径Path的修改需要nginx来实现
+
 nginx
 ^^^^^
 
