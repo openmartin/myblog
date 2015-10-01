@@ -24,7 +24,6 @@ s3 virtual hosted-style and path-style access
 更多信息参考
 
 http://docs.aws.amazon.com/zh_cn/AmazonS3/latest/dev/UsingBucket.html#access-bucket-intro
-
 http://docs.aws.amazon.com/zh_cn/AmazonS3/latest/dev/VirtualHosting.html
 
 如何配置

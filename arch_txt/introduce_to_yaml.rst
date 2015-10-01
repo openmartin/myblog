@@ -56,7 +56,7 @@ yaml 可以在一个string中包含多个document， 每个文档以三个短横
 
 在yaml中有三种数据结构Scalar，Sequence，Mapping（标量，序列，字典）
 
-#. Scalar
+1. Scalar
 
 Scalar 的格式很灵活，可以不带引号, 单引号(不需要转义)，双引号（需要转义），还可以有多行的形式::
 
@@ -71,11 +71,11 @@ Scalar 的格式很灵活，可以不带引号, 单引号(不需要转义)，双
 
 更多情况参考 http://www.yaml.org/spec/1.2/spec.html 2.3. Scalars
 
-#. Sequence
+2. Sequence
 
 Sequence 有两种形式，和JSON一样的使用中括号[]， 或者是每个元素以短横线和空格("- ")开始。在最开始的例子中就可以看到两种形式。
 
-#. Mapping
+3. Mapping
 
 同样，Mapping也有两种形式，我们直接看例子吧::
 
@@ -92,7 +92,7 @@ python 和 yaml
 
 解析和生成yaml都可以用pyyaml库，用法参考上面的例子，主要使用两个函数 load 和 dump。
 
-在实际的使用过程中，我们都用yaml格式做配置文件，因为yaml格式的可读性非常好，人工编辑很方便，而且也方便程序读取。
+在实际的使用过程中，一般用yaml格式做配置文件，因为yaml格式的可读性非常好，人工编辑很方便，而且也方便程序读取。
 
 
 更多资料
@@ -102,6 +102,10 @@ yaml格式官网 http://www.yaml.org/
 
 pyyaml http://pyyaml.org/wiki/PyYAML
 
-各种编程语言在实现yaml解析的时候可能读取的数据类型类型不一致，如果需要更严格的指定数据类型需要了解yaml tags http://yaml.org/type/index.html
+各种编程语言在实现yaml解析的时候可能对应到本语言的数据类型类型可能不一致，
+如果需要更严格的指定数据类型需要了解yaml tags
+
+http://www.yaml.org/spec/1.2/spec.html 2.4. Tags
+http://yaml.org/type/index.html
 
 
