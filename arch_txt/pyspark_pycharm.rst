@@ -17,7 +17,7 @@ shell
 pycharm
 ------------
 
-在PyCharm的menu中找到Run ==> Edit Configurations
+在PyCharm的menu中找到Run -- Edit Configurations
 
 在Defaults当中找到python, 点击Environment, 增加两行环境变量::
 
@@ -26,5 +26,8 @@ pycharm
 
 
 .. image:: pycharm_run_add_env.jpg
+   :scale: 50 %
 
 重启PyCharm应该就不会看到红色波浪线了.
+
+

@@ -25,6 +25,7 @@ DynamoDB 是亚马逊AWS提供的一种完全托管的NoSQL数据库，省去部
 在浏览器中打开http://localhost:8000/shell/，你会看到DynamoDB javascript shell，在网页上你可以试试javascript API的用法。
 
 .. image:: DynamoDB_JavaScript_Shell.png
+   :scale: 50 %
 
 
 Boto3
