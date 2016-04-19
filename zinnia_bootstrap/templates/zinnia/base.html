@@ -32,7 +32,10 @@
   <div class="panel-heading">
     {% trans "Recent comments" %}
   </div>
-  <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></ul>
+  <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1"
+    data-show-time="1" data-show-title="1" data-show-admin="1"
+    data-excerpt-length="70" style="margin: 5px 15px 5px -25px;">
+  </ul>
 </aside>
 {% comment %}
 <aside id="widget-comments" class="widget panel panel-default">
@@ -111,11 +114,12 @@ var duoshuoQuery = {short_name:"openmartin"};
     })();
 </script>
 <style type="text/css">
+
 ul #ds-recent-comments .ds-recent-comments {
-margin: 5px 15px 5px -25px;
+  margin: 5px 15px 5px -25px;
 }
 ul #ds-recent-comments .ds-recent-comments li:first-child {
-border-top:none;
+  border-top:none;
 }
 ul #ds-top-threads .ds-top-threads {
   min-height:45px;
