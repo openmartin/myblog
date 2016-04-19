@@ -32,6 +32,13 @@
   <div class="panel-heading">
     {% trans "Recent comments" %}
   </div>
+  <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+</aside>
+{% comment %}
+<aside id="widget-comments" class="widget panel panel-default">
+  <div class="panel-heading">
+    {% trans "Recent comments" %}
+  </div>
   {% get_recent_comments %}
 </aside>
 <aside id="widget-linkbacks" class="widget panel panel-default">
@@ -40,18 +47,21 @@
   </div>
   {% get_recent_linkbacks %}
 </aside>
+{% endcomment %}
 <aside id="widget-randoms" class="widget panel panel-default">
   <div class="panel-heading">
     {% trans "Random entries" %}
   </div>
   {% get_random_entries %}
 </aside>
+{% comment %}
 <aside id="widget-populars" class="widget panel panel-default">
   <div class="panel-heading">
     {% trans "Popular entries" %}
   </div>
   {% get_popular_entries %}
 </aside>
+{% endcomment %}
 {% if user.is_authenticated %}
 <aside id="widget-tools" class="widget panel panel-danger">
   <div class="panel-heading">
