@@ -140,6 +140,7 @@ STATICFILES_FINDERS = (
 )
 
 # zinnia config
-ZINNIA_MARKUP_LANGUAGE = 'restructuredtext'
+# ZINNIA_MARKUP_LANGUAGE = 'restructuredtext'
+ZINNIA_MARKUP_LANGUAGE = 'markdown'
 
 ZINNIA_RESTRUCTUREDTEXT_SETTINGS = {'report_level': 'quiet'}
