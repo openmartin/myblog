@@ -34,7 +34,7 @@
   </div>
   <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1"
     data-show-time="1" data-show-title="1" data-show-admin="1"
-    data-excerpt-length="70" style="margin: 5px 15px 5px -25px;">
+    data-excerpt-length="70" >
   </ul>
 </aside>
 {% comment %}
@@ -102,17 +102,6 @@
 
 {% block script %}
 {{block.super}}
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"openmartin"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
 <style type="text/css">
 
 ul #ds-recent-comments .ds-recent-comments {
@@ -121,6 +110,7 @@ ul #ds-recent-comments .ds-recent-comments {
 ul #ds-recent-comments .ds-recent-comments li:first-child {
   border-top:none;
 }
+
 ul #ds-top-threads .ds-top-threads {
   min-height:45px;
 }
@@ -144,5 +134,18 @@ ul #ds-top-threads .ds-top-threads li:last-child {
   border-bottom-left-radius: 4px;
 }
 </style>
+
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"openmartin"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+
 {% endblock %}
 
