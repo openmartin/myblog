@@ -110,6 +110,17 @@
       </a>
     </p>
     {% endblock entry-shorturl %}
+
+    {% block entry-discussions %}
+    <p class="entry-discussions">
+      <span class="glyphicon glyphicon-comment"></span> <strong>{% trans "Discussions" %}</strong> :
+      <a href="{{ object.get_absolute_url }}#comments"
+         title="{% blocktrans with object=object.title %}Comments on {{ object }}{% endblocktrans %}">
+        <span class="ds-thread-count" data-thread-key="{{object.pk}}" data-count-type="comments">暂无评论</span>
+      </a>
+    </p>
+    {% endblock entry-discussions %}
+    {% comment %}
     {% block entry-discussions %}
     <p class="entry-discussions">
       <span class="glyphicon glyphicon-comment"></span> <strong>{% trans "Discussions" %}</strong> :
@@ -153,6 +164,7 @@
       {% endblock entry-trackbacks %}
     </p>
     {% endblock entry-discussions %}
+    {% endcomment %}
   </footer>
   {% endblock entry-footer %}
 </article>
