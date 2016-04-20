@@ -143,4 +143,8 @@ STATICFILES_FINDERS = (
 # ZINNIA_MARKUP_LANGUAGE = 'restructuredtext'
 ZINNIA_MARKUP_LANGUAGE = 'markdown'
 
-ZINNIA_RESTRUCTUREDTEXT_SETTINGS = {'report_level': 'quiet'}
+ZINNIA_MARKDOWN_EXTENSIONS = \
+['markdown.extensions.extra','markdown.extensions.toc',
+        'markdown.extensions.nl2br']
+
+# ZINNIA_RESTRUCTUREDTEXT_SETTINGS = {'report_level': 'quiet'}
