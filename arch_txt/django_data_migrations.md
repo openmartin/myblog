@@ -98,3 +98,14 @@ python manage.py loaddata appname_data.json
 
 缺点：数据量大的时候，速度相对较慢，表的关系比较复杂的时候可以导入不成功。
 
+### 常见数据导入导出
+
+一般情况下，我们导入导出的时候需要排除一些app，contenttypes(新环境migrate的时候会重新生成，而且包含数据)，sessions(用户session相关数据),  admin(admin log)
+
+auth 包含用户，可视情况决定是否导出
+
+```
+python manage.py dumpdata --all --indent=4 --exclude=auth --exclude=contenttypes --exclude=sessions --exclude=admin > all.json
+python manage.py loaddata all.json
+```
+
