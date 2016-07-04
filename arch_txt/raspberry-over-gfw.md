@@ -46,7 +46,7 @@ sudo iptables -A FORWARD -i ppp0 -o wlan0 -m state --state RELATED,ESTABLISHED -
 sudo iptables -A FORWARD -i wlan0 -o ppp0 -j ACCEPT  
 ```
 ## ssh
-应为GreenVPN服务商禁掉了ssh，所以无法ssh国外的服务器，我们只能手工添加路由，走eth0
+因为GreenVPN服务商禁掉了ssh，所以无法ssh国外的服务器，我们只能手工添加路由，走eth0
 ```
 sudo ip route add 52.91.123.123 via 192.168.0.1
 ```
