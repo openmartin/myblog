@@ -14,7 +14,7 @@ https://www.raspberrypi.org/downloads/noobs/
 开机装完系统之后就不需要显示器，键鼠了，但是第一次开机时一定需要，显示器需要支持HDMI口，树莓派并没VGA口，如果显示器是VGA口的，可以买一个HDMI转VGA的转接头。
 整个过程有点像ubuntu 的LiveCD，详细可以去看官方的视频。
 ## 修改apt-get source
-启动系统之后，我们进入了Rasbian系统，就是一个Debian系统，所有的配置和Ubuntu很像，在搜索一些资料的时候可以直接用Debian或Ubuntu关键词来搜索。
+启动系统之后，我们进入了Raspbian系统，就是一个Debian系统，所有的配置和Ubuntu很像，在搜索一些资料的时候可以直接用Debian或Ubuntu关键词来搜索。
 连接树莓派官方的源比较慢，我们可以改成国内的镜像源。
 ```shell
 # /etc/apt.d/source.list
