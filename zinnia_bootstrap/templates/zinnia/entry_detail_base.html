@@ -59,16 +59,28 @@
 {% block entry-discussions %}
 <p class="entry-discussions">
   <span class="glyphicon glyphicon-comment"></span> <strong>{% trans "Discussions" %}</strong> :
-  <a href="{{ object.get_absolute_url }}#comments"
-     title="{% blocktrans with object=object.title %}Comments on {{ object }}{% endblocktrans %}">
-    <span class="ds-thread-count" data-thread-key="{{object.pk}}" data-count-type="comments">暂无评论</span>
+  <a class="cloud-tie-join-count" href="javascript:void(0);">
+      <span class="icon-comment"></span>
+      <span class="join-count">0</span>
+      <span class="join-text">人参与</span>
   </a>
 </p>
 {% endblock entry-discussions %}
 
 {% block entry-comments %}
 <a name="comments" id="comments" ></a>
-<div class="ds-thread" data-thread-key="{{entry.pk}}" data-title="{{entry.title}}" data-url="http://{{ request.get_host  }}{{ request.get_full_path  }}"></div>
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+var cloudTieConfig = {
+  //url: document.location.href,
+  url: "",
+  sourceId: "{{ entry.pk }}",
+  productKey: "760c2d4dd39d4c4b9c8384f5ae7725c5",
+  target: "cloud-tie-wrapper"
+};
+var yunManualLoad = true;
+Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
 {% endblock entry-comments %}
 
 {% block entry-pingbacks %}
